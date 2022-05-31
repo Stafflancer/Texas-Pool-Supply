@@ -1,0 +1,186 @@
+@import '../../src/scss/components/vars';
+
+section.simple-cards-block {
+  padding: 128px 0 84px;
+
+  @media (max-width: $md) {
+    padding: 90px 0 84px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 75px 0 35px;
+  }
+
+  @media (max-width: $xs) {
+    padding: 50px 0 10px;
+  }
+
+  .heading {
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .content {
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+    margin: 24px auto 0;
+
+    @media (max-width: $sm) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+
+  .cards-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 36px 0 0 0;
+
+    @media (max-width: $md) {
+      justify-content: center;
+    }
+
+    @media (max-width: $xs) {
+      max-width: 300px !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &.cols-2 {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .card {
+        width: 50%;
+
+        @media (max-width: $xs) {
+          width: 100%;
+        }
+      }
+    }
+
+    &.cols-3 {
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .card {
+        width: 33.33%;
+
+        @media (max-width: $sm) {
+          width: 50%;
+        }
+
+        @media (max-width: $xs) {
+          width: 100%;
+        }
+      }
+    }
+
+    &.cols-4 {
+      .card {
+        width: 25%;
+
+        @media (max-width: $md) {
+          width: 33.33%;
+        }
+
+        @media (max-width: $sm) {
+          width: 50%;
+        }
+
+        @media (max-width: $xs) {
+          width: 100%;
+        }
+      }
+    }
+
+    .card {
+      padding: 0 15px;
+      margin: 0 0 70px;
+
+      @media (max-width: $md) {
+        margin: 0 0 50px;
+      }
+
+      @media (max-width: $sm) {
+        margin: 0 0 40px;
+      }
+
+      .image-holder {
+        overflow: hidden;
+        min-height: 237px;
+        max-height: 237px;
+        margin-bottom: 28px;
+
+        @media (max-width: $sm) {
+          margin-bottom: 20px;
+        }
+
+        @media (max-width: $xs) {
+          margin-bottom: 15px;
+          min-height: 0;
+          max-height: 100%;
+        }
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          min-height: 237px;
+          display: block;
+          transition: transform $delay;
+
+          @media (max-width: $xs) {
+            min-height: 0;
+          }
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      h5 {
+        margin: 0;
+        text-align: center;
+        position: relative;
+        color: $theme_dark_blue;
+        transition: color $delay;
+      }
+    }
+
+    a.card {
+      &:hover h5 {
+        color: $theme_red;
+      }
+
+      h5::after {
+        content: '>';
+        font-weight: 700;
+        position: absolute;
+        top: 1px;
+        bottom: 0;
+        width: 22px;
+        height: 22px;
+        font-size: 22px;
+        transform: translateX(3px);
+
+        @media (max-width: $xs) {
+          width: 17px;
+          height: 17px;
+          font-size: 17px;
+        }
+      }
+    }
+  }
+}

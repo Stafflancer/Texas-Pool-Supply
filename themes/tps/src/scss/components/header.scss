@@ -1,0 +1,289 @@
+header {
+  height: 88px;
+  background-color: $white;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    bottom: 1px;
+    left: 0;
+    height: 10px;
+    width: 100%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .container {
+    height: 100%;
+    transform: translateX(-16px);
+
+    @media (max-width: $lg) {
+      transform: none;
+    }
+  }
+
+  .section-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > div {
+      height: 100%;
+    }
+  }
+
+  .h-logo-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+
+    @media (max-width: $lg) {
+      margin-right: 25px;
+    }
+
+    .h-logo {
+      width: 100%;
+      max-width: 246px;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: $md) {
+        max-width: 200px;
+      }
+
+      @media (max-width: $xs) {
+        max-width: 180px;
+      }
+
+      img, svg {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  .h-menu-holder {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-family: $outfit;
+    font-weight: 400;
+
+    .burger-btn {
+      display: none;
+
+      @media (max-width: $md) {
+        display: block;
+        width: 27px;
+        height: 27px;
+      }
+    }
+
+    .h-menu {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      margin-right: 42px;
+
+      @media (max-width: $lg) {
+        margin-right: 25px;
+      }
+
+      @media (max-width: $md) {
+        position: absolute;
+        background-color: $white;
+        top: 88px;
+        left: 0;
+        width: 100%;
+        padding: 20px 15px;
+        justify-content: center;
+        height: auto;
+        display: none;
+      }
+
+      & > div {
+        justify-content: center;
+        display: none;
+
+        @media (max-width: $md) {
+          display: flex;
+          margin-top: 16px;
+        }
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+
+        li {
+          list-style-type: none;
+
+          @media (max-width: $md) {
+            width: 100%;
+          }
+        }
+      }
+
+      & > ul {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+
+        @media (max-width: $md) {
+          flex-direction: column;
+        }
+
+        & > li {
+          font-size: 15px;
+          margin-right: 18px;
+          position: relative;
+          height: 100%;
+          display: flex;
+          align-items: center;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          @media (max-width: $md) {
+            flex-direction: column;
+            margin-right: 0;
+            margin-bottom: 16px;
+
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+          }
+
+          &:hover {
+            &::after {
+              transform: rotate(180deg);
+            }
+
+            .sub-menu {
+              display: block;
+            }
+          }
+
+          & > a {
+            color: $text_black;
+
+            &:hover {
+              color: $theme_red;
+            }
+          }
+
+          &.menu-item-has-children {
+            position: relative;
+            z-index: 3;
+
+            &::after {
+              content: '';
+              position: absolute;
+              top: 41px;
+              right: -12px;
+              width: 8px;
+              height: 8px;
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 330 330' style='enable-background:new 0 0 330 330;' xml:space='preserve'%3E%3Cpath style='fill:%23545759' id='XMLID_225_' d='M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393 c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393 s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z'/%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3Cg%3E%3C/g%3E%3C/svg%3E%0A");              background-size: 20px;
+              background-size: 8px;
+              background-repeat: no-repeat;
+              transition: transform $delay;
+
+              @media (max-width: $md) {
+                top: 6px;
+                right: 0;
+              }
+            }
+          }
+
+          .sub-menu {
+            display: none;
+            position: absolute;
+            top: 85px;
+            background-color: $white;
+            padding: 10px 12px 18px;
+            font-size: 14px;
+            min-width: 115px;
+            text-transform: initial;
+            z-index: 1;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+
+            @media (max-width: $md) {
+              position: static;
+              background-color: rgba(0, 0, 0, 0);
+              min-width: 0;
+              flex-direction: column;
+              box-shadow: none;
+              padding: 10px;
+            }
+
+            li {
+              margin-bottom: 8px;
+
+              @media (max-width: $md) {
+                text-align: center;
+              }
+
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+
+              a {
+                color: $text_black;
+
+                &:hover {
+                  color: $theme_red;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .wp-block-button {
+      &:first-of-type {
+        margin-left: 20px;
+
+        @media (max-width: $md) {
+          margin: 25px 0 8px 0;
+        }
+      }
+
+      &:last-of-type {
+        margin-left: 15px;
+        margin-right: 7px;
+
+        @media (max-width: $lg) {
+          margin-left: 5px;
+          margin-right: 0;
+        }
+
+        @media (max-width: $md) {
+          margin: 0;
+        }
+      }
+
+      @media (max-width: $md) {
+        display: none;
+      }
+    }
+
+    .custom-btn {
+      padding: 9px 19px;
+      font-size: 15px;
+
+      @media (max-width: $lg) {
+        padding: 9px 10px;
+      }
+    }
+  }
+}

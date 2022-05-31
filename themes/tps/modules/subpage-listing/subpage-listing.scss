@@ -1,0 +1,162 @@
+@import '../../src/scss/components/vars';
+
+section.subpage-listing {
+  padding: 170px 0 22px;
+
+  @media (max-width: $md) {
+    padding: 150px 0 22px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 140px 0 22px;
+  }
+
+  @media (max-width: $xs) {
+    padding: 130px 0 22px;
+  }
+
+  .breadcrumbs {
+    text-align: center;
+    margin-bottom: 21px;
+
+    @media (max-width: $xs) {
+      margin-bottom: 20px;
+    }
+  }
+
+  h2,
+  .content-block {
+    max-width: 930px;
+    text-align: center;
+  }
+
+  h2 {
+    font-weight: 700;
+    margin: 0 auto 15px;
+  }
+
+  .content-block {
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 27px;
+
+    @media (max-width: $sm) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+      line-height: 23px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 64px -15px 0;
+
+    @media (max-width: $sm) {
+      margin-top: 40px;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 30px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      padding: 0 15px;
+      color: $black;
+      margin: 0 0 60px 0;
+      width: 25%;
+
+      @media (max-width: $lg) {
+        width: 33.33%;
+      }
+
+      @media (max-width: $md) {
+        width: 50%;
+      }
+
+      @media (max-width: $xs) {
+        width: 100%;
+        margin: 0 0 50px 0;
+      }
+
+      &:hover {
+        .heading {
+          color: $theme_red;
+        }
+      }
+
+      .image {
+        margin-bottom: 24px;
+
+        @media (max-width: $xs) {
+          margin-bottom: 18px;
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          max-height: 237px;
+          object-fit: cover;
+        }
+      }
+
+      .heading {
+        color: $theme_dark_blue;
+        font-size: 24px;
+        font-family: $outfit;
+        font-weight: 600;
+        transition: color $delay;
+
+        @media (max-width: $md) {
+          font-size: 22px;
+        }
+
+        @media (max-width: $sm) {
+          font-size: 20px;
+        }
+
+        @media (max-width: $xs) {
+          font-size: 18px;
+        }
+      }
+
+      .content {
+        font-size: 18px;
+        line-height: 25px;
+        margin-top: 12px;
+
+        @media (max-width: $xs) {
+          font-size: 16px;
+          line-height: 23px;
+        }
+      }
+
+      .btn-holder {
+        margin-top: 21px;
+
+        @media (max-width: $xs) {
+          margin-top: 15px;
+        }
+
+        .custom-btn {
+          padding: 5px 14px;
+          font-size: 18px;
+
+          @media (max-width: $sm) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

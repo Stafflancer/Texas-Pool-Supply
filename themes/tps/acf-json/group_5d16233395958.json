@@ -1,0 +1,56 @@
+{
+    "key": "group_5d16233395958",
+    "title": "Fields: Color Picker — To Clone",
+    "fields": [
+        {
+            "key": "field_5d16235b009ea",
+            "label": "Color Picker",
+            "name": "color_picker",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "theme-red": "<div style=\"display: flex; align-items: center;\"><span style=\"background-color:#ac1c34; border: 1px solid #ccc;display:inline-block; height: 15px; margin-right: 10px; width: 15px;\"><\/span>Theme Red<\/div>",
+                "theme-dark-blue": "<div style=\"display: flex; align-items: center;\"><span style=\"background-color:#1e3060; border: 1px solid #ccc;display:inline-block; height: 15px; margin-right: 10px; width: 15px;\"><\/span>Theme Dark Blue<\/div>",
+                "theme-blue": "<div style=\"display: flex; align-items: center;\"><span style=\"background-color:#2196f2; border: 1px solid #ccc;display:inline-block; height: 15px; margin-right: 10px; width: 15px;\"><\/span>Theme Blue<\/div>",
+                "theme-light-gray": "<div style=\"display: flex; align-items: center;\"><span style=\"background-color:#b2b3b6; border: 1px solid #ccc;display:inline-block; height: 15px; margin-right: 10px; width: 15px;\"><\/span>Theme Light Gray<\/div>",
+                "theme-gray": "<div style=\"display: flex; align-items: center;\"><span style=\"background-color:#545759; border: 1px solid #ccc;display:inline-block; height: 15px; margin-right: 10px; width: 15px;\"><\/span>Theme Gray<\/div>",
+                "theme-black": "<div style=\"display: flex; align-items: center;\"><span style=\"background-color:#000000; border: 1px solid #ccc;display:inline-block; height: 15px; margin-right: 10px; width: 15px;\"><\/span>Theme Black<\/div>",
+                "theme-white": "<div style=\"display: flex; align-items: center;\"><span style=\"background-color:#cccccc; border: 1px solid #ccc;display:inline-block; height: 15px; margin-right: 10px; width: 15px;\"><\/span>Theme White<\/div>",
+                "white": "<div style=\"display: flex; align-items: center;\"><span style=\"background-color:#ffffff; border: 1px solid #ccc;display:inline-block; height: 15px; margin-right: 10px; width: 15px;\"><\/span>White<\/div>"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1652658376
+}

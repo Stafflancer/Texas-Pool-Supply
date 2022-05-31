@@ -1,0 +1,56 @@
+@import '../../src/scss/components/vars';
+
+section.page-template-1-block {
+  padding: 188px 0 50px;
+
+  @media (max-width: $md) {
+    padding: 160px 0 40px 0;
+  }
+
+  @media (max-width: $sm) {
+    padding: 140px 0 40px 0;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 13px;
+    padding-left: 30px;
+
+    @media (max-width: $lg) {
+      padding-left: 0;
+    }
+  }
+
+  h2 {
+    font-weight: 700;
+    color: $theme_dark_blue;
+    max-width: 500px;
+    margin: 0 0 10px;
+    padding-left: 30px;
+
+    @media (max-width: $lg) {
+      padding-left: 0;
+    }
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 27px;
+    color: $theme_gray;
+    max-width: 700px;
+    padding-left: 30px;
+
+    @media (max-width: $lg) {
+      padding-left: 0;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+}

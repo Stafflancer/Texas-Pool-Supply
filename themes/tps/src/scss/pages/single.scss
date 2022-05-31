@@ -1,0 +1,7 @@
+body.single-wpsl_stores {
+  main {
+    & > div, & > table {
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+@import '../../src/scss/components/vars';
+
+section.events-posts-grid {
+  padding: 100px 0;
+  background-color: rgba($theme_white, 0.18);
+
+  @media (max-width: $md) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: $sm) {
+    padding: 60px 0 31px;
+  }
+
+  @media (max-width: $xs) {
+    padding: 50px 0 21px;
+  }
+
+  h3 {
+    text-align: center;
+    font-weight: 700;
+    color: $theme_dark_blue;
+    margin: 0 0 20px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+    line-height: 27px;
+    color: $theme_gray;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 30px;
+
+    @media (max-width: $lg) {
+      padding-left: 0;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
+
+  .filters-holder {
+    margin-top: 40px;
+
+    @media (max-width: $sm) {
+      label {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    ul {
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @media (max-width: $sm) {
+        flex-direction: column;
+      }
+
+      li {
+        padding: 0;
+
+        &:nth-child(2) select {
+          transform: translateX(24px);
+
+          @media (max-width: $sm) {
+            transform: none;
+          }
+        }
+      }
+    }
+
+    select {
+      background-color: $theme_red;
+      color: $white;
+      height: 36px;
+      min-width: 220px;
+      text-align-last: left;
+      border: 0;
+      padding: 0 15px;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: $outfit;
+      text-transform: uppercase;
+      outline: none;
+      appearance: none;
+      background-image: url("../../../img/triangle.png");
+      background-repeat: no-repeat;
+      background-size: 10px;
+      background-position: 93% center;
+
+      @media (max-width: $sm) {
+        margin-bottom: 10px;
+        min-width: 0;
+        width: 100%;
+        max-width: 300px;
+        background-size: 11px;
+        background-position: 94% center;
+      }
+
+      @media (max-width: $xs) {
+        font-size: 15px;
+        background-size: 9px;
+      }
+
+      option {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px -18px 0;
+
+    @media (max-width: $lg) {
+      margin: 80px -18px 0;
+    }
+
+    @media (max-width: $md) {
+      margin: 60px -18px 0;
+    }
+
+    @media (max-width: $sm) {
+      margin: 40px -18px 0;
+    }
+
+    @media (max-width: $xs) {
+      margin: 30px -18px 0;
+    }
+
+    .event-post-card {
+      width: 33.33%;
+      padding: 0 18px;
+      margin-bottom: 29px;
+
+      @media (max-width: $md) {
+        width: 50%;
+      }
+
+      @media (max-width: $sm) {
+        width: 100%;
+      }
+    }
+  }
+}

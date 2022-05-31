@@ -1,0 +1,170 @@
+@import '../../src/scss/components/vars';
+
+section.partner-steps-block {
+  padding: 92px 0 54px;
+
+  @media (max-width: $md) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: $sm) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: $xs) {
+    padding: 50px 0;
+  }
+
+  h3 {
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    margin: 0 0 64px 0;
+
+    @media (max-width: $md) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    @media (max-width: $sm) {
+      font-size: 26px;
+      line-height: 36px;
+      margin: 0 0 40px 0;
+    }
+
+    @media (max-width: $xs) {
+      font-size: 22px;
+      line-height: 32px;
+      margin: 0 0 30px 0;
+    }
+  }
+
+  .steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1159px;
+    margin: 0 auto;
+
+    .step {
+      width: calc(50% - 10px);
+      max-width: 557px;
+      margin-bottom: 71px;
+      box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.3);
+
+      @media (max-width: $md) {
+        width: 100%;
+        margin: 0 auto 30px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      .icon-holder {
+        background-color: $theme_dark_blue;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 96px;
+
+        @media (max-width: $md) {
+          height: 75px;
+        }
+
+        @media (max-width: $xs) {
+          height: 70px;
+        }
+
+        img {
+          display: block;
+          width: 50px;
+
+          @media (max-width: $md) {
+            width: 40px;
+          }
+
+          @media (max-width: $xs) {
+            width: 37px;
+          }
+        }
+      }
+
+      .content-col {
+        text-align: center;
+        padding: 43px 20px 45px;
+
+        @media (max-width: $xs) {
+          padding: 20px;
+        }
+
+        h5 {
+          margin: 0 auto 12px;
+          max-width: 474px;
+          font-weight: 700;
+        }
+
+        .content {
+          font-size: 20px;
+          line-height: 30px;
+          margin: 0 auto;
+          max-width: 474px;
+
+          @media (max-width: $sm) {
+            font-size: 18px;
+            line-height: 25px;
+          }
+
+          @media (max-width: $xs) {
+            font-size: 16px;
+            line-height: 23px;
+          }
+
+          p {
+            margin: 0;
+          }
+        }
+
+        .btns {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin: 40px auto 0;
+
+          @media (max-width: $sm) {
+            flex-direction: column;
+
+            .wp-block-button {
+              margin: 0 0 4px 0;
+
+              &:last-of-type {
+                margin: 0;
+              }
+            }
+          }
+
+          @media (max-width: $xs) {
+            margin-top: 15px;
+          }
+
+          .custom-btn {
+            font-size: 18px;
+            padding: 13px 10px;
+            margin: 6px;
+            min-width: 232px;
+            display: inline-block;
+
+            @media (max-width: $sm) {
+              min-width: 0;
+
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import '../../src/scss/components/vars';
+
+section.cover-image-block {
+  .top-holder {
+    padding: 188px 0 78px 55px;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(30,48,96,1) 8%, rgba(33,150,242,1) 94%);
+
+    @media (max-width: $md) {
+      padding: 160px 0 40px 0;
+    }
+
+    @media (max-width: $sm) {
+      padding: 140px 0 40px 0;
+    }
+
+    .breadcrumbs {
+      color: $white;
+      margin-bottom: 16px;
+      max-width: 680px;
+
+      .divider {
+        color: $white;
+      }
+
+      a {
+        color: $white;
+
+        &:hover {
+          color: $theme_light_gray;
+        }
+      }
+    }
+
+    h2 {
+      margin-bottom: 12px;
+      max-width: 600px;
+      font-weight: 700;
+    }
+
+    .content {
+      font-size: 20px;
+      max-width: 680px;
+      line-height: 27px;
+
+      @media (max-width: $sm) {
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      @media (max-width: $xs) {
+        font-size: 16px;
+        line-height: 23px;
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .image-holder {
+    content: '';
+    height: 432px;
+    background-size: cover;
+    background-position: center;
+
+    @media (max-width: $md) {
+      height: 350px;
+    }
+
+    @media (max-width: $sm) {
+      height: 300px;
+    }
+
+    @media (max-width: $sm) {
+      height: 250px;
+    }
+  }
+}
+
+body.page-become-a-customer section.cover-image-block .top-holder {
+  padding: 185px 0 136px 55px;
+
+  @media (max-width: $md) {
+    padding: 160px 0 40px 0;
+  }
+
+  @media (max-width: $sm) {
+    padding: 140px 0 40px 0;
+  }
+
+  .breadcrumbs {
+    margin-bottom: 15px;
+  }
+}

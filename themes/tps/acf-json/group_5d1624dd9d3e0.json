@@ -1,0 +1,311 @@
+{
+    "key": "group_5d1624dd9d3e0",
+    "title": "Background Options",
+    "fields": [
+        {
+            "key": "field_5d1625036d0ba",
+            "label": "Background Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5d1625096d0bb",
+            "label": "Background Options",
+            "name": "background_options",
+            "type": "group",
+            "instructions": "Remember: image and video files should be compressed and optimized with tools like ImageOptim (https:\/\/imageoptim.com\/online) and Handbrake (https:\/\/handbrake.fr\/) prior to upload. For best results, background media should be at least 1280x720.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5d1625166d0bc",
+                    "label": "Background Type",
+                    "name": "background_type",
+                    "type": "button_group",
+                    "instructions": "Choose a type of background.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "none": "None",
+                        "color": "Color",
+                        "image": "Image",
+                        "video": "Video"
+                    },
+                    "allow_null": 0,
+                    "default_value": "",
+                    "layout": "horizontal",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_5d16255c6d0bd",
+                    "label": "Background Color",
+                    "name": "background_color",
+                    "type": "clone",
+                    "instructions": "Select a background color.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5d1625166d0bc",
+                                "operator": "==",
+                                "value": "color"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "group_5d16233395958"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                },
+                {
+                    "key": "field_5d1626806d0c0",
+                    "label": "Background Image",
+                    "name": "background_image",
+                    "type": "image",
+                    "instructions": "Add\/Upload an image file. (jpg, .png).",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5d1625166d0bc",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "full",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5d1626ac6d0c1",
+                    "label": "Background Video (mp4)",
+                    "name": "background_video_mp4",
+                    "type": "file",
+                    "instructions": "Required. Add\/Upload an .mp4 video file.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5d1625166d0bc",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ".mp4"
+                },
+                {
+                    "key": "field_5d1626d96d0c2",
+                    "label": "Background Video (webm)",
+                    "name": "background_video_webm",
+                    "type": "file",
+                    "instructions": "Optional. Add\/Upload an .webm video file. Note: .webm has better compression than .mp4, resulting in much smaller file size.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5d1625166d0bc",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5d1625c56d0be",
+                    "label": "Overlay",
+                    "name": "has_overlay",
+                    "type": "true_false",
+                    "instructions": "Background Overlay to use with Image and Video only.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5d1625166d0bc",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5d1625166d0bc",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Add",
+                    "ui_off_text": "Remove"
+                },
+                {
+                    "key": "field_5d1626116d0bf",
+                    "label": "Overlay Color",
+                    "name": "overlay_color",
+                    "type": "clone",
+                    "instructions": "Select Background Overlay Color.",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5d1625c56d0be",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_5d1625166d0bc",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5d1625c56d0be",
+                                "operator": "==",
+                                "value": "1"
+                            },
+                            {
+                                "field": "field_5d1625166d0bc",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "clone": [
+                        "group_5d16233395958"
+                    ],
+                    "display": "group",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 1
+                },
+                {
+                    "key": "field_61b97b57863d0",
+                    "label": "Fixed Background",
+                    "name": "has_parallax",
+                    "type": "true_false",
+                    "instructions": "Background stays in place as you scroll down, also known as a parallax effect.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_5d1625166d0bc",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ],
+                        [
+                            {
+                                "field": "field_5d1625166d0bc",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "50",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1652656092
+}

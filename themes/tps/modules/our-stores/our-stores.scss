@@ -1,0 +1,281 @@
+@import '../../src/scss/components/vars';
+
+section.our-stores {
+  padding: 174px 0 62px;
+
+  @media (max-width: $md) {
+    padding: 160px 0 40px 0;
+  }
+
+  @media (max-width: $sm) {
+    padding: 140px 0 40px 0;
+  }
+
+  .breadcrumbs {
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+
+  .title-holder {
+    margin: 0 auto;
+    max-width: 680px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 12px;
+      font-weight: 700;
+
+      @media (max-width: $xs) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .subtitle {
+      font-size: 20px;
+      line-height: 27px;
+
+      @media (max-width: $sm) {
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      @media (max-width: $xs) {
+        font-size: 16px;
+        line-height: 23px;
+      }
+    }
+  }
+
+  #wpsl-wrap {
+    margin-top: 85px;
+
+    @media (max-width: $sm) {
+      margin-top: 30px;
+    }
+
+    @media (max-width: $xs) {
+      margin-top: 20px;
+    }
+
+    #wpsl-stores {
+      height: 530px !important;
+
+      @media (max-width: $lg) {
+        height: 450px !important;
+      }
+
+      @media (max-width: $sm) {
+        height: 400px !important;
+      }
+
+      @media (max-width: $xs) {
+        height: 350px !important;
+      }
+    }
+
+    .wpsl-search {
+      background-color: rgba(0,0,0,0);
+      padding: 0;
+      margin: 0;
+
+      #wpsl-search-wrap div {
+        float: none;
+        margin: 0;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 60px;
+
+        @media (max-width: $sm) {
+          margin-bottom: 35px;
+        }
+
+        @media (max-width: $xs) {
+          margin-bottom: 20px;
+          flex-direction: column;
+        }
+
+        .wpsl-input {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @media (max-width: $xs) {
+            flex-direction: column;
+          }
+
+          input {
+            height: 46px;
+            border-radius: 0;
+            width: 100%;
+            max-width: 200px;
+            outline: none;
+            font-family: $source_sans3;
+            font-weight: 400;
+            color: $theme_gray;
+
+            @media (max-width: $xs) {
+              margin-bottom: 5px;
+            }
+          }
+
+          label {
+            float: none;
+            width: 100%;
+            display: block !important;
+            font-size: 14px;
+            font-family: $lato;
+            font-weight: 400;
+            margin-right: 33px;
+            color: $theme_gray;
+
+            @media (max-width: $sm) {
+              margin-right: 10px;
+            }
+
+            @media (max-width: $xs) {
+              margin-right: 0;
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        #wpsl-search-btn {
+          color: $white;
+          font-size: 20px;
+          min-width: 138px;
+          padding: 8px 25px;
+          text-align: center;
+          text-transform: uppercase !important;
+          display: inline-block;
+          font-family: $outfit;
+          font-weight: 700;
+          border: 1px solid $theme_red;
+          background-image: none;
+          background-color: $theme_red;
+          border-radius: 0;
+          margin: 0 0 0 20px !important;
+          transition: background-color $delay, color $delay;
+
+          &:hover {
+            background-color: rgba(0,0,0,0);
+            color: $theme_red;
+          }
+
+          @media (max-width: $md) {
+            padding: 11px 15px;
+            font-size: 18px;
+          }
+
+          @media (max-width: $sm) {
+            font-size: 16px;
+          }
+
+          @media (max-width: $xs) {
+            margin-left: 0 !important;
+          }
+        }
+      }
+    }
+
+    #wpsl-gmap {
+      max-width: 687px;
+      z-index: 2;
+    }
+
+    #wpsl-result-list {
+      width: 100%;
+      padding: 30px 42px 30px 51px;
+      color: $theme_gray;
+      font-family: $lato;
+      font-weight: 400;
+
+      @media (max-width: $md) {
+        padding: 10px;
+      }
+
+      ul {
+        max-width: 385px;
+        overflow: auto;
+      }
+
+      li {
+        font-size: 16px;
+        line-height: 22px;
+        display: flex;
+        align-items: flex-end;
+        padding: 6px 55px 13px 0 !important;
+        max-width: 375px;
+        border-bottom: 2px solid rgba(0,0,0,0);
+        transition: border-bottom-color $delay;
+
+        @media (max-width: $md) {
+          padding: 13px 10px 13px 0 !important;
+        }
+
+        @media (max-width: $sm) {
+          max-width: 100%;
+        }
+
+        &:hover {
+          border-bottom-color: $theme_red;
+
+          .wpsl-direction-wrap {
+            opacity: 1;
+          }
+        }
+
+        a {
+          color: $theme_gray;
+
+          &:hover {
+            color: $theme_red;
+          }
+        }
+
+        p {
+          margin: 0;
+
+          &:first-of-type > strong:first-of-type {
+            color: $theme_red;
+            text-decoration: underline;
+          }
+        }
+
+        strong {
+          font-family: $source_sans3;
+          font-weight: 700;
+        }
+
+        .wpsl-direction-wrap {
+          margin-left: auto;
+          padding-left: 29px;
+          opacity: 0;
+          transition: opacity $delay;
+          position: relative;
+          white-space: nowrap;
+          text-decoration: underline;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 19px;
+            height: 25px;
+            background-image: url("../../../img/location-pin.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+
+          a {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

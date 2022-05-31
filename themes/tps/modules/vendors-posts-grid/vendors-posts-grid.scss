@@ -1,0 +1,39 @@
+@import '../../src/scss/components/vars';
+
+section.vendors-posts-grid {
+  padding: 46px 0 23px;
+
+  @media (max-width: $lg) {
+    padding-left: 0;
+  }
+
+  @media (max-width: $md) {
+    padding: 40px 0 20px;
+  }
+
+  @media (max-width: $sm) {
+    padding: 20px 0;
+  }
+
+  .posts {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+
+    .vendor-post-card {
+      width: 33.33%;
+      padding: 0 20px;
+      margin-bottom: 80px;
+
+      @media (max-width: $md) {
+        width: 50%;
+        margin-bottom: 50px;
+      }
+
+      @media (max-width: $sm) {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
